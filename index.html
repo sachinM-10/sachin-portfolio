@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Sachin M - Aspiring Software Engineer and Backend Developer specializing in Java, Node.js, Express.js, REST APIs, MySQL, and MongoDB.">
+    <meta name="author" content="Sachin M">
+    <meta name="keywords" content="Sachin M, Backend Developer, Software Engineer, Node.js, Java, Express.js, MySQL, MongoDB, Data Structures, Portfolio">
+    <title>Sachin M | Aspiring Software Engineer & Backend Developer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome & DevIcons for SVG/Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Ambient Background Lighting -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+    <div class="bg-grid-pattern"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar-header" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Sachin</span>
+                <span class="logo-accent">.dev</span>
+                <span class="logo-bracket"> /&gt;</span>
+            </a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> About</a>
+                <a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> Skills</a>
+                <a href="#projects" class="nav-link"><i class="fa-solid fa-laptop-code"></i> Projects</a>
+                <a href="#achievements" class="nav-link"><i class="fa-solid fa-trophy"></i> LeetCode & Badges</a>
+                <a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+                <a href="#contact" class="nav-link"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="btn btn-outline btn-sm" id="open-resume-btn">
+                    <i class="fa-solid fa-file-lines"></i> Resume
+                </button>
+                <a href="#contact" class="btn btn-primary btn-sm nav-cta">
+                    <i class="fa-solid fa-comments"></i> Let's Connect
+                </a>
+                <button class="hamburger-menu" id="hamburger-btn" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+            <div class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Sachin</span>
+                <span class="logo-accent">.dev</span>
+                <span class="logo-bracket"> /&gt;</span>
+            </div>
+            <button class="close-drawer" id="close-drawer-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="drawer-links">
+            <a href="#home" class="drawer-link"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="#about" class="drawer-link"><i class="fa-solid fa-user"></i> About</a>
+            <a href="#skills" class="drawer-link"><i class="fa-solid fa-code"></i> Skills</a>
+            <a href="#projects" class="drawer-link"><i class="fa-solid fa-laptop-code"></i> Projects</a>
+            <a href="#achievements" class="drawer-link"><i class="fa-solid fa-trophy"></i> LeetCode & Badges</a>
+            <a href="#education" class="drawer-link"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+            <a href="#contact" class="drawer-link"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+        </div>
+        <div class="drawer-footer">
+            <button class="btn btn-outline btn-full" id="drawer-resume-btn">
+                <i class="fa-solid fa-file-lines"></i> View Full Resume
+            </button>
+        </div>
+    </div>
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="status-badge pulse">
+                        <span class="status-dot"></span>
+                        <span>Open to Software Engineer & Backend Developer Roles</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Building Scalable <span class="gradient-text">Backend Systems</span> & Robust APIs
+                    </h1>
+                    
+                    <h2 class="hero-subtitle">
+                        Hi, I'm <strong class="highlight-name">Sachin M</strong> — Computer Science Engineering student passionate about Data Structures, Algorithms, Node.js, Java, and Database Architecture.
+                    </h2>
+                    
+                    <p class="hero-description">
+                        Focused on writing clean, maintainable code and engineering high-performance RESTful services. Solved <span class="highlight-stat">200+ DSA problems</span> on LeetCode with 50 & 100 Days consistency badges.
+                    </p>
+
+                    <div class="hero-ctas">
+                        <a href="#projects" class="btn btn-primary btn-lg">
+                            <span>Explore Projects</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="https://leetcode.com/u/Sachin-10m/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+                            <i class="fa-solid fa-code"></i>
+                            <span>LeetCode Profile</span>
+                        </a>
+                        <button class="btn btn-outline btn-lg" id="copy-email-btn" data-email="sachinmadhaiyan@gmail.com">
+                            <i class="fa-regular fa-copy"></i>
+                            <span>Copy Email</span>
+                        </button>
+                    </div>
+
+                    <!-- Quick Stats Cards -->
+                    <div class="hero-stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fa-solid fa-fire"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-number">200+</span>
+                                <span class="stat-label">LeetCode Solved</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fa-solid fa-award"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-number">100 Days</span>
+                                <span class="stat-label">LeetCode Streak Badge</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-number">7.8 / 10</span>
+                                <span class="stat-label">B.E. CSE CGPA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic Card -->
+                <div class="hero-visual">
+                    <div class="profile-card-wrapper">
+                        <div class="profile-card glass-card">
+                            <div class="profile-avatar-container">
+                                <img src="assets/images/avatar.png" alt="Sachin M - Backend Developer" class="profile-avatar" id="avatar-img">
+                                <div class="avatar-glow"></div>
+                            </div>
+                            <div class="profile-details">
+                                <h3 class="profile-name">Sachin M</h3>
+                                <p class="profile-role">Aspiring Backend Developer</p>
+                                <div class="profile-location">
+                                    <i class="fa-solid fa-location-dot"></i> Dharmapuri, Tamil Nadu, India
+                                </div>
+                            </div>
+
+                            <div class="tech-pills">
+                                <span class="tech-pill"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                                <span class="tech-pill"><i class="fa-brands fa-java"></i> Java</span>
+                                <span class="tech-pill"><i class="fa-solid fa-database"></i> Express.js</span>
+                                <span class="tech-pill"><i class="fa-solid fa-server"></i> MySQL</span>
+                                <span class="tech-pill"><i class="fa-solid fa-leaf"></i> MongoDB</span>
+                            </div>
+
+                            <div class="social-links-row">
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn Profile">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://leetcode.com/u/Sachin-10m/" target="_blank" rel="noopener noreferrer" class="social-btn" title="LeetCode Profile">
+                                    <i class="fa-solid fa-code"></i>
+                                </a>
+                                <a href="mailto:sachinmadhaiyan@gmail.com" class="social-btn" title="Send Email">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </a>
+                                <a href="tel:9444173099" class="social-btn" title="Call Phone">
+                                    <i class="fa-solid fa-phone"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Terminal Console -->
+                        <div class="terminal-widget glass-card">
+                            <div class="terminal-header">
+                                <div class="terminal-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <span class="terminal-title">sachin@backend-server:~</span>
+                            </div>
+                            <div class="terminal-body" id="terminal-body">
+                                <div class="terminal-line"><span class="cmd-prompt">sachin@portfolio:~$</span> <span class="typing-text">cat summary.json</span></div>
+                                <div class="terminal-output">
+                                    {<br>
+                                    &nbsp;&nbsp;<span class="json-key">"name"</span>: <span class="json-val">"Sachin M"</span>,<br>
+                                    &nbsp;&nbsp;<span class="json-key">"role"</span>: <span class="json-val">"Backend Developer & Software Engineer"</span>,<br>
+                                    &nbsp;&nbsp;<span class="json-key">"education"</span>: <span class="json-val">"B.E. CSE @ BIT (2023-2027)"</span>,<br>
+                                    &nbsp;&nbsp;<span class="json-key">"skills"</span>: [<span class="json-val">"Java"</span>, <span class="json-val">"Node.js"</span>, <span class="json-val">"Express"</span>, <span class="json-val">"MySQL"</span>, <span class="json-val">"MongoDB"</span>],<br>
+                                    &nbsp;&nbsp;<span class="json-key">"leetcode"</span>: <span class="json-val">"200+ Solved | 100 Days Badge"</span>,<br>
+                                    &nbsp;&nbsp;<span class="json-key">"status"</span>: <span class="json-val">"Ready for Impact 🚀"</span><br>
+                                    }
+                                </div>
+                                <div class="terminal-line"><span class="cmd-prompt">sachin@portfolio:~$</span> <span class="blinking-cursor">_</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle"><i class="fa-solid fa-user"></i> Professional Background</span>
+                    <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card glass-card">
+                        <div class="about-card-icon">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                        </div>
+                        <h3>Backend Engineering Core</h3>
+                        <p>
+                            Aspiring Software Engineer with a solid background in Data Structures, Algorithms, Object-Oriented Programming, and server-side development. I thrive on translating business logic into fast, secure, and well-structured APIs.
+                        </p>
+                    </div>
+
+                    <div class="about-card glass-card">
+                        <div class="about-card-icon">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <h3>Database Design & Optimization</h3>
+                        <p>
+                            Experienced with relational (MySQL) and non-relational (MongoDB) database systems. I design normalized relational schemes, write optimized queries, and manage aggregation pipelines for robust application backends.
+                        </p>
+                    </div>
+
+                    <div class="about-card glass-card">
+                        <div class="about-card-icon">
+                            <i class="fa-solid fa-code-compare"></i>
+                        </div>
+                        <h3>Problem Solving & Algorithmic Focus</h3>
+                        <p>
+                            Strong problem solver with over 200 DSA problems solved on LeetCode. Recipient of 50 Days and 100 Days consistency badges, demonstrating relentless dedication to daily algorithmic practice and optimal time/space complexity.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Info Highlights Table/Bar -->
+                <div class="info-bar glass-card margin-top-lg">
+                    <div class="info-item">
+                        <span class="info-label"><i class="fa-solid fa-location-dot"></i> Location</span>
+                        <span class="info-val">Dharmapuri, Tamil Nadu, India</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label"><i class="fa-solid fa-envelope"></i> Email</span>
+                        <a href="mailto:sachinmadhaiyan@gmail.com" class="info-val info-link">sachinmadhaiyan@gmail.com</a>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label"><i class="fa-solid fa-phone"></i> Phone</span>
+                        <a href="tel:9444173099" class="info-val info-link">+91 9444173099</a>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label"><i class="fa-solid fa-graduation-cap"></i> Degree</span>
+                        <span class="info-val">B.E. Computer Science (2023 - 2027)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="section-padding bg-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle"><i class="fa-solid fa-gears"></i> Expertise & Toolkit</span>
+                    <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+                    <p class="section-desc">A detailed overview of my technical capabilities, languages, frameworks, and developer tools.</p>
+                    <div class="section-divider"></div>
+                </div>
+
+                <!-- Skills Filter Buttons -->
+                <div class="skills-filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Skills</button>
+                    <button class="filter-btn" data-filter="backend">Backend & APIs</button>
+                    <button class="filter-btn" data-filter="language">Languages</button>
+                    <button class="filter-btn" data-filter="database">Databases</button>
+                    <button class="filter-btn" data-filter="core">Core Concepts</button>
+                    <button class="filter-btn" data-filter="tools">Tools & Environment</button>
+                </div>
+
+                <!-- Skills Grid -->
+                <div class="skills-grid" id="skills-grid">
+
+                    <!-- Backend -->
+                    <div class="skill-card glass-card" data-category="backend">
+                        <div class="skill-header">
+                            <div class="skill-icon node"><i class="fa-brands fa-node-js"></i></div>
+                            <div class="skill-name-wrap">
+                                <h4>Node.js</h4>
+                                <span class="skill-level">Advanced API Development</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Asynchronous event-driven backend services, middleware, modular server structure, file processing.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-fill" style="width: 88%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass-card" data-category="backend">
+                        <div class="skill-header">
+                            <div class="skill-icon express"><i class="fa-solid fa-server"></i></div>
+                            <div class="skill-name-wrap">
+                                <h4>Express.js</h4>
+                                <span class="skill-level">RESTful Architecture</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">REST API design, routing, controller-service pattern, authentication middleware, error handling.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass-card" data-category="backend">
+                        <div class="skill-header">
+                            <div class="skill-icon api"><i class="fa-solid fa-network-wired"></i></div>
+                            <div class="skill-name-wrap">
+                                <h4>RESTful APIs</h4>
+                                <span class="skill-level">HTTP & Security</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Resource design, status codes, JSON payload processing, JWT authentication, CORS, rate limiting concepts.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Languages -->
+                    <div class="skill-card glass-card" data-category="language">
+                        <div class="skill-header">
+                            <div class="skill-icon java"><i class="fa-brands fa-java"></i></div>
+                            <div class="skill-name-wrap">
+                                <h4>Java</h4>
+                                <span class="skill-level">Core & OOP Proficiency</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Strong fundamentals, Collections framework, Exception handling, Object-Oriented design patterns, DSA implementation.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass-card" data-category="language">
+                        <div class="skill-header">
+                            <div class="skill-icon c-lang"><i class="fa-solid fa-code"></i></div>
+                            <div class="skill-name-wrap">
+                                <h4>C Language</h4>
+                                <span class="skill-level">Foundational</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Pointers, memory allocation, procedural logic, structured programming algorithms.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-fill" style="width: 78%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Databases -->
+                    <div class="skill-card glass-card" data-category="database">
+                        <div class="skill-header">
+                            <div class="skill-icon mysql"><i class="fa-solid fa-database"></i></div>
+                            <div class="skill-name-wrap">
+                                <h4>MySQL</h4>
+                                <span class="skill-level">Relational Database</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Complex SQL queries, JOINs, Indexing, Schema normalization, Transaction management, Query optimization.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-fill" style="width: 86%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass-card" data-category="database">
+                        <div class="skill-header">
+                            <div class="skill-icon mongo"><i class="fa-solid fa-leaf"></i></div>
+                            <div class="skill-name-wrap">
+                                <h4>MongoDB</h4>
+                                <span class="skill-level">NoSQL Document Store</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Document schemas, Mongoose ORM, Aggregation pipelines, indexing, CRUD operations.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-fill" style="width: 84%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Core Concepts -->
+                    <div class="skill-card glass-card" data-category="core">
+                        <div class="skill-header">
+                            <div class="skill-icon dsa"><i class="fa-solid fa-brain"></i></div>
+                            <div class="skill-name-wrap">
+                                <h4>Data Structures & Algorithms</h4>
+                                <span class="skill-level">200+ LeetCode Solved</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Arrays, HashTables, Linked Lists, Trees, Graphs, Sorting, Searching, Dynamic Programming foundation.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-fill" style="width: 88%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass-card" data-category="core">
+                        <div class="skill-header">
+                            <div class="skill-icon oop"><i class="fa-solid fa-cubes"></i></div>
+                            <div class="skill-name-wrap">
+                                <h4>OOP Principles</h4>
+                                <span class="skill-level">Core Engineering</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Encapsulation, Inheritance, Polymorphism, Abstraction, Clean Code principles & Modularity.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="skill-card glass-card" data-category="tools">
+                        <div class="skill-header">
+                            <div class="skill-icon git"><i class="fa-brands fa-git-alt"></i></div>
+                            <div class="skill-name-wrap">
+                                <h4>Git & GitHub</h4>
+                                <span class="skill-level">Version Control</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Branch management, commits, pull requests, collaborative workflows, version tracking.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass-card" data-category="tools">
+                        <div class="skill-header">
+                            <div class="skill-icon vscode"><i class="fa-solid fa-laptop-code"></i></div>
+                            <div class="skill-name-wrap">
+                                <h4>VS Code & Google Colab</h4>
+                                <span class="skill-level">Development Environment</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Debugging tools, extensions, workspace customization, interactive notebooks.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-fill" style="width: 92%;"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle"><i class="fa-solid fa-code-branch"></i> Hands-on Work</span>
+                    <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                    <p class="section-desc">Key backend and full-stack software applications I have built and optimized.</p>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- PROJECT 1 -->
+                    <div class="project-card glass-card">
+                        <div class="project-banner">
+                            <div class="project-badge individual">Individual Project</div>
+                            <div class="project-banner-icon">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Digital Knowledge Assessment Portal</h3>
+                            <p class="project-subtitle">Full-Stack Online Assessment Platform with Security & Analytics</p>
+                            
+                            <p class="project-summary">
+                                Developed a robust assessment engine featuring timed examinations, automated evaluation algorithms, detailed student performance results, and instant certificate generation.
+                            </p>
+
+                            <ul class="project-highlights">
+                                <li><i class="fa-solid fa-check-circle"></i> Designed secure backend workflows and anti-cheating state tracking for exam integrity.</li>
+                                <li><i class="fa-solid fa-check-circle"></i> Built comprehensive Admin Dashboard for question management and detailed result analytics.</li>
+                                <li><i class="fa-solid fa-check-circle"></i> Optimized MongoDB query operations for high concurrency exam processing.</li>
+                            </ul>
+
+                            <div class="project-tags">
+                                <span class="tag">Python / Flask</span>
+                                <span class="tag">MongoDB</span>
+                                <span class="tag">HTML5 / CSS3</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Anti-Cheating Workflows</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-sm view-project-btn" data-project="portal">
+                                    <i class="fa-solid fa-eye"></i> View Technical Details
+                                </button>
+                                <button class="btn btn-outline btn-sm copy-project-summary" data-title="Digital Knowledge Assessment Portal">
+                                    <i class="fa-solid fa-share-nodes"></i> Share
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 2 -->
+                    <div class="project-card glass-card">
+                        <div class="project-banner">
+                            <div class="project-badge group">Group Project | Backend Developer</div>
+                            <div class="project-banner-icon">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">AI-Powered Placement Monitoring System</h3>
+                            <p class="project-subtitle">Scalable Backend Service & Placement Analytics Workflow</p>
+                            
+                            <p class="project-summary">
+                                Engineered backend services using Node.js and Express.js with MySQL to streamline campus placement activities, student eligibility verifications, and company hiring pipelines.
+                            </p>
+
+                            <ul class="project-highlights">
+                                <li><i class="fa-solid fa-check-circle"></i> Authored modular RESTful APIs for authentication, student data management, and eligibility checks.</li>
+                                <li><i class="fa-solid fa-check-circle"></i> Optimized complex SQL queries and JOIN statements for fast student filtering.</li>
+                                <li><i class="fa-solid fa-check-circle"></i> Integrated APIs smoothly with frontend interface to enhance system responsiveness.</li>
+                            </ul>
+
+                            <div class="project-tags">
+                                <span class="tag">Node.js</span>
+                                <span class="tag">Express.js</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">REST APIs</span>
+                                <span class="tag">Authentication</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-sm view-project-btn" data-project="placement">
+                                    <i class="fa-solid fa-eye"></i> View Technical Details
+                                </button>
+                                <button class="btn btn-outline btn-sm copy-project-summary" data-title="AI-Powered Placement Monitoring System">
+                                    <i class="fa-solid fa-share-nodes"></i> Share
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ACHIEVEMENTS & LEETCODE SECTION -->
+        <section id="achievements" class="section-padding bg-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle"><i class="fa-solid fa-fire"></i> Coding Consistency</span>
+                    <h2 class="section-title">LeetCode <span class="gradient-text">Achievements</span></h2>
+                    <p class="section-desc">Demonstrated commitment to continuous algorithmic problem solving and optimization.</p>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="leetcode-showcase-grid">
+
+                    <!-- Spotlight Card -->
+                    <div class="leetcode-card glass-card">
+                        <div class="lc-badge-header">
+                            <div class="lc-logo-circle">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div class="lc-title-wrap">
+                                <h3>LeetCode Competency</h3>
+                                <a href="https://leetcode.com/u/Sachin-10m/" target="_blank" rel="noopener noreferrer" class="lc-link">
+                                    leetcode.com/u/Sachin-10m/ <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="lc-stats-row">
+                            <div class="lc-stat-box">
+                                <span class="lc-stat-num gradient-text">200+</span>
+                                <span class="lc-stat-text">DSA Problems Solved</span>
+                            </div>
+                            <div class="lc-stat-box">
+                                <span class="lc-stat-num">50 Days</span>
+                                <span class="lc-stat-text">Daily Streak Badge</span>
+                            </div>
+                            <div class="lc-stat-box">
+                                <span class="lc-stat-num">100 Days</span>
+                                <span class="lc-stat-text">Daily Streak Badge</span>
+                            </div>
+                        </div>
+
+                        <div class="lc-description">
+                            <p>
+                                Regularly solving problems across Data Structures such as Arrays, Hash Maps, Linked Lists, Trees, and Searching/Sorting Algorithms. Focused on optimizing time complexity (Big-O) and space efficiency.
+                            </p>
+                        </div>
+
+                        <div class="lc-cta">
+                            <a href="https://leetcode.com/u/Sachin-10m/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">
+                                <i class="fa-solid fa-external-link"></i> Visit My LeetCode Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Visual Badge Cards -->
+                    <div class="badges-flex">
+                        <div class="badge-card glass-card glow-border">
+                            <div class="badge-icon-wrapper gold">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div class="badge-info">
+                                <span class="badge-tag">LeetCode Badge</span>
+                                <h4>100 Days Coding Badge</h4>
+                                <p>Awarded for 100 consecutive days of consistent problem solving and active submission.</p>
+                            </div>
+                        </div>
+
+                        <div class="badge-card glass-card glow-border">
+                            <div class="badge-icon-wrapper silver">
+                                <i class="fa-solid fa-medal"></i>
+                            </div>
+                            <div class="badge-info">
+                                <span class="badge-tag">LeetCode Badge</span>
+                                <h4>50 Days Coding Badge</h4>
+                                <p>Earned for maintaining a 50-day streak of algorithmic challenges.</p>
+                            </div>
+                        </div>
+
+                        <div class="badge-card glass-card glow-border">
+                            <div class="badge-icon-wrapper bronze">
+                                <i class="fa-solid fa-terminal"></i>
+                            </div>
+                            <div class="badge-info">
+                                <span class="badge-tag">Problem Solving</span>
+                                <h4>200+ DSA Solutions</h4>
+                                <p>Mastery of fundamental computer science algorithmic patterns & edge case handling.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION & CERTIFICATIONS SECTION -->
+        <section id="education" class="section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle"><i class="fa-solid fa-graduation-cap"></i> Academic Foundation</span>
+                    <h2 class="section-title">Education & <span class="gradient-text">Certifications</span></h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="edu-cert-wrapper">
+
+                    <!-- Education Column -->
+                    <div class="edu-column">
+                        <h3 class="column-header"><i class="fa-solid fa-university"></i> Academic Qualifications</h3>
+
+                        <div class="timeline">
+
+                            <div class="timeline-item glass-card">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-header">
+                                    <span class="timeline-date"><i class="fa-regular fa-calendar-alt"></i> 2023 – 2027</span>
+                                    <span class="score-badge">CGPA: 7.8 / 10</span>
+                                </div>
+                                <h4 class="timeline-title">Bannari Amman Institute of Technology</h4>
+                                <p class="timeline-degree">Bachelor of Engineering in Computer Science and Engineering</p>
+                                <p class="timeline-desc">
+                                    Focused on Core Computer Science principles including Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Software Engineering.
+                                </p>
+                            </div>
+
+                            <div class="timeline-item glass-card">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-header">
+                                    <span class="timeline-date"><i class="fa-regular fa-calendar-alt"></i> 2021 – 2023</span>
+                                    <span class="score-badge">Percentage: 92%</span>
+                                </div>
+                                <h4 class="timeline-title">Sri Vijay Vidyalaya Matric Higher Secondary School</h4>
+                                <p class="timeline-degree">Higher Secondary Education (HSC)</p>
+                                <p class="timeline-desc">
+                                    Completed Higher Secondary Education with distinction, specializing in Physics, Chemistry, Mathematics, and Computer Science.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Certifications Column -->
+                    <div class="cert-column">
+                        <h3 class="column-header"><i class="fa-solid fa-certificate"></i> Certifications</h3>
+
+                        <div class="cert-cards-list">
+
+                            <div class="cert-card glass-card">
+                                <div class="cert-icon">
+                                    <i class="fa-solid fa-network-wired"></i>
+                                </div>
+                                <div class="cert-details">
+                                    <span class="cert-issuer">Cisco Networking Academy</span>
+                                    <h4 class="cert-name">Cisco Networking Basics</h4>
+                                    <p class="cert-desc">Core networking concepts, OSI model layers, TCP/IP fundamentals, routing, and network protocol architecture.</p>
+                                </div>
+                            </div>
+
+                            <div class="cert-card glass-card">
+                                <div class="cert-icon">
+                                    <i class="fa-brands fa-python"></i>
+                                </div>
+                                <div class="cert-details">
+                                    <span class="cert-issuer">Coursera</span>
+                                    <h4 class="cert-name">Create Your First Python Program</h4>
+                                    <p class="cert-desc">Python programming syntax, logical control structures, data operations, and script creation.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section-padding bg-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle"><i class="fa-solid fa-paper-plane"></i> Get In Touch</span>
+                    <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+                    <p class="section-desc">I am currently looking for Software Engineering & Backend Developer opportunities. Feel free to reach out!</p>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="contact-grid">
+
+                    <!-- Contact Details Cards -->
+                    <div class="contact-info-wrap">
+                        
+                        <div class="contact-info-card glass-card">
+                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="contact-text">
+                                <span class="contact-label">Email Address</span>
+                                <a href="mailto:sachinmadhaiyan@gmail.com" class="contact-val">sachinmadhaiyan@gmail.com</a>
+                            </div>
+                            <button class="icon-btn copy-btn" data-copy="sachinmadhaiyan@gmail.com" title="Copy Email">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <div class="contact-info-card glass-card">
+                            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="contact-text">
+                                <span class="contact-label">Phone Number</span>
+                                <a href="tel:9444173099" class="contact-val">+91 9444173099</a>
+                            </div>
+                            <button class="icon-btn copy-btn" data-copy="9444173099" title="Copy Phone">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <div class="contact-info-card glass-card">
+                            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="contact-text">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-val">Dharmapuri, Tamil Nadu, India</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card glass-card">
+                            <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                            <div class="contact-text">
+                                <span class="contact-label">LinkedIn</span>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-val">Connect on LinkedIn</a>
+                            </div>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="icon-btn" title="Open LinkedIn">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Interactive Message Form -->
+                    <div class="contact-form-container glass-card">
+                        <h3 class="form-title"><i class="fa-solid fa-paper-plane"></i> Send Me a Message</h3>
+                        <p class="form-desc">Fill in your details below to send me a direct message.</p>
+
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-name">Your Name *</label>
+                                    <input type="text" id="form-name" required placeholder="e.g. John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-email">Your Email *</label>
+                                    <input type="email" id="form-email" required placeholder="e.g. john@example.com">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-subject">Subject</label>
+                                <input type="text" id="form-subject" placeholder="e.g. Software Engineer Position / Project Inquiry">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-message">Message *</label>
+                                <textarea id="form-message" rows="5" required placeholder="Hello Sachin, I would like to discuss an opportunity..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full" id="submit-form-btn">
+                                <i class="fa-solid fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="#home" class="nav-logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">Sachin</span>
+                    <span class="logo-accent">.dev</span>
+                    <span class="logo-bracket"> /&gt;</span>
+                </a>
+                <p class="footer-tagline">Aspiring Software Engineer & Backend Developer crafting scalable systems.</p>
+            </div>
+
+            <div class="footer-center">
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#achievements">LeetCode</a>
+                    <a href="#education">Education</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <p>© 2026 Sachin M. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="https://leetcode.com/u/Sachin-10m/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:sachinmadhaiyan@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- RESUME MODAL -->
+    <div class="modal-backdrop" id="resume-modal">
+        <div class="modal-box glass-card resume-modal-box">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-file-lines"></i> Sachin M - Professional Resume</h3>
+                <div class="modal-actions">
+                    <button class="btn btn-primary btn-sm" id="print-resume-btn"><i class="fa-solid fa-print"></i> Print / Save PDF</button>
+                    <button class="close-modal-btn" id="close-resume-modal"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+
+            <div class="modal-body printable-resume" id="printable-resume-content">
+                <div class="resume-header-block">
+                    <h2>Sachin M</h2>
+                    <p class="resume-role-subtitle">Aspiring Software Engineer | Backend Developer</p>
+                    <div class="resume-contact-bar">
+                        <span><i class="fa-solid fa-phone"></i> +91 9444173099</span> |
+                        <span><i class="fa-solid fa-envelope"></i> sachinmadhaiyan@gmail.com</span> |
+                        <span><i class="fa-solid fa-location-dot"></i> Dharmapuri, Tamil Nadu</span> |
+                        <span><i class="fa-brands fa-linkedin"></i> LinkedIn</span>
+                    </div>
+                </div>
+
+                <div class="resume-section-block">
+                    <h4 class="resume-section-title">Professional Summary</h4>
+                    <p>
+                        Aspiring Software Engineer with strong foundations in Data Structures, Algorithms, Object-Oriented Programming, and backend development. Proficient in Java, Node.js, Express.js, MySQL, and MongoDB, with hands-on experience building RESTful APIs and scalable web applications.
+                    </p>
+                </div>
+
+                <div class="resume-section-block">
+                    <h4 class="resume-section-title">Technical Skills</h4>
+                    <ul class="resume-list">
+                        <li><strong>Programming Languages:</strong> Java, C</li>
+                        <li><strong>Backend Development:</strong> Node.js, Express.js, REST APIs</li>
+                        <li><strong>Databases:</strong> MySQL, MongoDB</li>
+                        <li><strong>Core Concepts:</strong> Data Structures and Algorithms, Object-Oriented Programming</li>
+                        <li><strong>Tools & Platforms:</strong> Git, GitHub, VS Code, Google Colab</li>
+                    </ul>
+                </div>
+
+                <div class="resume-section-block">
+                    <h4 class="resume-section-title">Projects</h4>
+
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <span class="resume-item-title">Digital Knowledge Assessment Portal</span>
+                            <span class="resume-item-tag">Individual Project</span>
+                        </div>
+                        <ul class="resume-bullet-list">
+                            <li>Developed a full-stack assessment portal using Flask, MongoDB, HTML, CSS, and JavaScript with timer-based exams, automatic evaluation, result management, and certificate generation.</li>
+                            <li>Designed secure backend workflows, admin dashboard, anti-cheating features, and optimized MongoDB operations for reliable assessment processing.</li>
+                        </ul>
+                    </div>
+
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <span class="resume-item-title">AI-Powered Placement Monitoring System</span>
+                            <span class="resume-item-tag">Backend Developer | Group Project</span>
+                        </div>
+                        <ul class="resume-bullet-list">
+                            <li>Built backend services using Node.js, Express.js, and MySQL, developing RESTful APIs for authentication, student management, eligibility verification, company management, and placement workflows.</li>
+                            <li>Optimized MySQL queries, implemented secure data handling, and integrated backend APIs with the frontend to improve application performance and scalability.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="resume-section-block">
+                    <h4 class="resume-section-title">Achievements</h4>
+                    <ul class="resume-bullet-list">
+                        <li>Solved 200+ Data Structures and Algorithms problems on LeetCode, strengthening problem-solving and algorithmic thinking.</li>
+                        <li>Earned the 50 Days and 100 Days LeetCode badges for consistent daily coding.</li>
+                        <li><strong>LeetCode Profile:</strong> leetcode.com/u/Sachin-10m/</li>
+                    </ul>
+                </div>
+
+                <div class="resume-section-block">
+                    <h4 class="resume-section-title">Education</h4>
+                    <div class="resume-edu-row">
+                        <div>
+                            <strong>Bannari Amman Institute of Technology</strong><br>
+                            Bachelor of Engineering in Computer Science and Engineering (2023 – 2027)
+                        </div>
+                        <div class="text-right"><strong>CGPA: 7.8 / 10</strong></div>
+                    </div>
+                    <div class="resume-edu-row margin-top-sm">
+                        <div>
+                            <strong>Sri Vijay Vidyalaya Matric Higher Secondary School</strong><br>
+                            Higher Secondary Education (2021 – 2023)
+                        </div>
+                        <div class="text-right"><strong>92%</strong></div>
+                    </div>
+                </div>
+
+                <div class="resume-section-block">
+                    <h4 class="resume-section-title">Certifications</h4>
+                    <ul class="resume-bullet-list">
+                        <li>Cisco Networking Basics</li>
+                        <li>Create Your First Python Program – Coursera</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECT DETAIL MODAL -->
+    <div class="modal-backdrop" id="project-modal">
+        <div class="modal-box glass-card project-modal-box">
+            <div class="modal-header">
+                <h3 id="project-modal-title">Project Technical Details</h3>
+                <button class="close-modal-btn" id="close-project-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" id="project-modal-content">
+                <!-- Dynamically injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Custom App JS -->
+    <script src="app.js"></script>
+</body>
+</html>
