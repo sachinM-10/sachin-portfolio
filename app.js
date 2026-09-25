@@ -132,95 +132,102 @@ document.addEventListener('DOMContentLoaded', () => {
     const viewProjectBtns = document.querySelectorAll('.view-project-btn');
 
     const projectData = {
-        portal: {
-            title: "Digital Knowledge Assessment Portal",
-            subtitle: "Full-Stack Assessment Platform with Security & Analytics (Individual Project)",
-            techStack: ["Python / Flask", "MongoDB", "JavaScript (ES6)", "HTML5 / CSS3", "Cryptographic Hashing"],
+        leave: {
+            title: "Employee Leave Management System",
+            subtitle: "Secure Spring Boot & React Enterprise Leave Management System (Backend Developer)",
+            techStack: ["Java", "Spring Boot", "Spring Security", "JWT", "Hibernate / JPA", "MySQL", "REST APIs", "React Integration"],
             architecture: `
                 <div class="project-modal-detail">
                     <h4><i class="fa-solid fa-layer-group"></i> Architecture & Core Implementation</h4>
-                    <p>Designed a high-reliability assessment portal capable of executing concurrent timer-based evaluations with automatic score computation and instant PDF certificate generation.</p>
+                    <p>Contributed as the Backend Developer building secure RESTful APIs for leave application, approval workflows, user management, and seamless backend service integration with the React frontend.</p>
                     
-                    <h5 class="margin-top-sm"><i class="fa-solid fa-shield-halved"></i> Anti-Cheating & Integrity Workflows:</h5>
+                    <h5 class="margin-top-sm"><i class="fa-solid fa-shield-halved"></i> Role-Based Auth & Security:</h5>
                     <ul>
-                        <li>Implemented tab-switch detection and window blur monitoring in JavaScript.</li>
-                        <li>Automated session lockdown and auto-submit on countdown expiry or integrity violations.</li>
-                        <li>Protected question sets with randomized seed fetching and time-capped API tokens.</li>
+                        <li>Implemented role-based authentication and authorization using <strong>Spring Security</strong> and <strong>JWT</strong> (JSON Web Tokens).</li>
+                        <li>Protected sensitive admin and manager endpoints with custom security filter chains and role hierarchy checks.</li>
+                        <li>Configured password hashing and stateless session management for maximum API security.</li>
                     </ul>
 
-                    <h5 class="margin-top-sm"><i class="fa-solid fa-database"></i> Database Design & Performance:</h5>
+                    <h5 class="margin-top-sm"><i class="fa-solid fa-sitemap"></i> Layered Architecture & Data Persistence:</h5>
                     <ul>
-                        <li>Configured MongoDB indexes on <code>user_id</code> and <code>assessment_id</code> for sub-millisecond exam result querying.</li>
-                        <li>Utilized MongoDB Aggregation Framework for generating score distributions and question difficulty ratings on the Admin Dashboard.</li>
+                        <li>Structured the project following clean <strong>Controller–Service–Repository</strong> pattern for optimal separation of concerns.</li>
+                        <li>Mapped relational database entities (Employee, LeaveRequest, Department, Role) using <strong>JPA</strong> and <strong>Hibernate</strong>.</li>
+                        <li>Enforced strict database integrity, input validation (<code>@Valid</code>), and automated business rules for leave quota calculations and approval workflows.</li>
                     </ul>
 
-                    <h5 class="margin-top-sm"><i class="fa-solid fa-code"></i> Core Flask Backend Route Sample:</h5>
-                    <pre class="code-block"><code>@app.route('/api/v1/assessment/submit', methods=['POST'])
-@jwt_required()
-def submit_assessment():
-    user_id = get_jwt_identity()
-    data = request.json
-    answers = data.get('answers')
-    exam_id = data.get('exam_id')
+                    <h5 class="margin-top-sm"><i class="fa-solid fa-code"></i> Spring Boot REST Controller Sample (Java):</h5>
+                    <pre class="code-block"><code>@RestController
+@RequestMapping("/api/v1/leaves")
+@RequiredArgsConstructor
+public class LeaveRequestController {
 
-    # Compute evaluation logic asynchronously
-    score, breakdown = evaluate_exam(exam_id, answers)
-    
-    # Store result in MongoDB
-    result_doc = {
-        "user_id": ObjectId(user_id),
-        "exam_id": ObjectId(exam_id),
-        "score": score,
-        "submitted_at": datetime.utcnow(),
-        "breakdown": breakdown
+    private final LeaveRequestService leaveService;
+
+    @PostMapping("/apply")
+    @PreAuthorize("hasRole('EMPLOYEE')")
+    public ResponseEntity&lt;LeaveResponseDto&gt; applyForLeave(
+            @Valid @RequestBody LeaveRequestDto requestDto,
+            Authentication authentication) {
+        
+        String employeeEmail = authentication.getName();
+        LeaveResponseDto response = leaveService.processLeaveApplication(requestDto, employeeEmail);
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
-    db.results.insert_one(result_doc)
-    return jsonify({"status": "success", "score": score}), 200</code></pre>
+
+    @PutMapping("/{id}/status")
+    @PreAuthorize("hasRole('MANAGER') or hasRole('ADMIN')")
+    public ResponseEntity&lt;LeaveResponseDto&gt; updateLeaveStatus(
+            @PathVariable Long id,
+            @RequestParam LeaveStatus status,
+            @RequestParam(required = false) String comments) {
+        
+        LeaveResponseDto updated = leaveService.updateStatus(id, status, comments);
+        return ResponseEntity.ok(updated);
+    }
+}</code></pre>
                 </div>
             `
         },
-        placement: {
-            title: "AI-Powered Placement Monitoring System",
-            subtitle: "Scalable Backend Services & Placement Analytics Workflow (Backend Developer | Group Project)",
-            techStack: ["Node.js", "Express.js", "MySQL", "RESTful APIs", "JWT Auth", "Postman"],
+        portal: {
+            title: "Digital Knowledge Assessment Portal",
+            subtitle: "Automated Evaluation & Assessment Platform with Spring Boot & MySQL (Backend Developer)",
+            techStack: ["Java", "Spring Boot", "REST APIs", "MySQL", "JPA / Hibernate", "User Auth", "Certificate Gen"],
             architecture: `
                 <div class="project-modal-detail">
-                    <h4><i class="fa-solid fa-layer-group"></i> Backend Engineering & Architecture</h4>
-                    <p>Engineered core REST API micro-services to power campus placement operations, student eligibility verification engines, and recruiter company workflows.</p>
+                    <h4><i class="fa-solid fa-layer-group"></i> Backend Engineering & Workflows</h4>
+                    <p>Contributed as the Backend Developer developing secure RESTful APIs for assessment management, automatic examination evaluation, result processing, certificate generation, and user authentication.</p>
 
-                    <h5 class="margin-top-sm"><i class="fa-solid fa-key"></i> Key Modules Built:</h5>
+                    <h5 class="margin-top-sm"><i class="fa-solid fa-gears"></i> Key Modules & Business Logic:</h5>
                     <ul>
-                        <li><strong>Authentication & Authorization:</strong> Role-based access control (Admin, Student, Placement Officer) using JWT and bcrypt password hashing.</li>
-                        <li><strong>Eligibility Engine:</strong> Automated qualification filter logic comparing student CGPA, active arrears, department criteria against company requirements.</li>
-                        <li><strong>Company Workflow Service:</strong> API endpoints for job posting creation, application submission, interview round status tracking.</li>
+                        <li><strong>Assessment Management:</strong> REST APIs for test creation, question categorizations, options mapping, and time limits.</li>
+                        <li><strong>Automatic Evaluation Engine:</strong> Server-side scoring algorithms that compare submitted answers against key solutions in real time.</li>
+                        <li><strong>Result & Certificate Processing:</strong> Instant result compilation, grade assignment, and automated certificate generation pipeline.</li>
                     </ul>
 
-                    <h5 class="margin-top-sm"><i class="fa-solid fa-database"></i> Database Schema & Optimization:</h5>
+                    <h5 class="margin-top-sm"><i class="fa-solid fa-database"></i> MySQL Database & Performance:</h5>
                     <ul>
-                        <li>Designed normalized MySQL relational schema (Students, Companies, Job_Postings, Applications, Eligibility_Rules).</li>
-                        <li>Optimized complex multi-table SQL <code>JOIN</code> queries with foreign key constraints, reducing response times by 35%.</li>
+                        <li>Designed clean, normalized MySQL relational database schemas for Users, Assessments, Questions, Submissions, and Results.</li>
+                        <li>Optimized database operations and queries to support reliable assessment processing under concurrent user requests.</li>
                     </ul>
 
-                    <h5 class="margin-top-sm"><i class="fa-solid fa-code"></i> Express.js Controller Sample:</h5>
-                    <pre class="code-block"><code>// Student Eligibility Service Controller
-const verifyEligibility = async (req, res) => {
-    try {
-        const { companyId, studentId } = req.params;
-        const [rows] = await db.query(
-            \`SELECT s.id, s.cgpa, s.arrears, c.min_cgpa, c.max_arrears 
-             FROM students s, company_criteria c 
-             WHERE s.id = ? AND c.company_id = ?\`,
-            [studentId, companyId]
-        );
+                    <h5 class="margin-top-sm"><i class="fa-solid fa-code"></i> Spring Boot Evaluation Controller Sample (Java):</h5>
+                    <pre class="code-block"><code>@RestController
+@RequestMapping("/api/v1/assessments")
+public class AssessmentController {
 
-        if (!rows.length) return res.status(404).json({ error: 'Record not found' });
-        
-        const eligible = rows[0].cgpa >= rows[0].min_cgpa && rows[0].arrears <= rows[0].max_arrears;
-        res.status(200).json({ studentId, eligible, details: rows[0] });
-    } catch (err) {
-        res.status(500).json({ error: 'Database query failed' });
+    @Autowired
+    private AssessmentService assessmentService;
+
+    @PostMapping("/{assessmentId}/submit")
+    public ResponseEntity&lt;EvaluationResultDto&gt; submitAssessment(
+            @PathVariable Long assessmentId,
+            @RequestBody AssessmentSubmissionDto submission,
+            @AuthenticationPrincipal UserPrincipal user) {
+
+        EvaluationResultDto result = assessmentService.evaluateSubmission(assessmentId, user.getId(), submission);
+        return ResponseEntity.ok(result);
     }
-};</code></pre>
+}</code></pre>
                 </div>
             `
         }
